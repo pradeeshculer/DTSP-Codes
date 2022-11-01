@@ -1,0 +1,19 @@
+clear;
+clc;
+close;
+a=0.8
+w=0:0.01*%pi:2*%pi
+x=(1-a*cos(w))
+y=(a*sin(w))
+h=((x)^2+(y)^2)
+H=sqrt(h)^-1
+P=atan(y,x)
+title("frequence response of 1st order system")
+subplot(2,1,1)
+plot(w,H)
+xlabel("Frequency")
+ylabel("Magnitude")
+subplot(2,1,2)
+plot(w,P)
+xlabel("Frequency")
+ylabel("Phase")
